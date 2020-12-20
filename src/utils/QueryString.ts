@@ -7,7 +7,7 @@ type KeyValue = {
 
 export class QueryString {
     static getQueryString = () => {
-        return (Environment.isTest) ? window.location.search : '';
+        return (!Environment.isTest) ? window.location.search : '';
     }
 
     static getParsed = <T extends Object>(queryString?: string): T => {

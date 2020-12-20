@@ -12,8 +12,8 @@ describe('SudokuDsl', () => {
         expect(SudokuDsl.getVerticalRowByIndex(solvedSudoku, 5).map(x => x.value)).toStrictEqual([8, 5, 2, 1, 3, 4, 7, 9, 6]);
     });
 
-    // it('should get subgrid values by index', () => {
-    //     // act + assert
-    //     expect(SudokuDsl.getSubgridByIndex(solvedSudoku, 5).map(x => x.value)).toStrictEqual([7, 6, 1, 8, 5, 3, 9, 2, 4]);
-    // });
+    it('should get subgrid values by index', () => {
+        // act + assert
+        expect(SudokuDsl.getSubgridByIndex(solvedSudoku, 4).map(x => x.value)).toStrictEqual([7, 6, 1, 8, 5, 3, 9, 2, 4]);
+    });
 });

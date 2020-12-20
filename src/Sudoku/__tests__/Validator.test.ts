@@ -81,9 +81,9 @@ describe('Validator', () => {
             expect(() => validator.validateHorizontalRows(invalidSolvedSudoku2)).toThrow();
         });
 
-        // it('should invalidate grid with invalid subgrid', () => {
-        //     // act + assert
-        //     expect(() => validator.validateSubgrids(invalidSolvedSudoku3)).toThrow();
-        // });
+        it('should invalidate grid with invalid subgrid', () => {
+            // act + assert
+            expect(() => validator.validateSubgrids(invalidSolvedSudoku3)).toThrow();
+        });
     });
 });

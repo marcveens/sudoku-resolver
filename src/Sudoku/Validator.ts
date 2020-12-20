@@ -37,7 +37,6 @@ export class Validator {
         try {
             this.validateHorizontalRows(grid);
             this.validateVerticalRows(grid);
-            // this.validateSubgrids(grid);
         } catch (e) {
             throw e;
         }
@@ -69,18 +68,18 @@ export class Validator {
         }
     }    
     
-    // public validateSubgrids(grid: GridType) {
-    //     try {
-    //         for (let i = 0; i < this.rowLength; i++) {
-    //             const values = SudokuDsl.getSubgridByIndex(grid, i);
-    //             if (values.map(x => x.value).reduce(this.rowReducer) !== this.totalRowValue) {
-    //                 throw new Error(`Invalid subgrid found, index ${i}`);
-    //             }
-    //         }
-    //     } catch (e) {
-    //         throw e;
-    //     }
-    // }
+    public validateSubgrids(grid: GridType) {
+        try {
+            for (let i = 0; i < this.rowLength; i++) {
+                const values = SudokuDsl.getSubgridByIndex(grid, i);
+                if (values.map(x => x.value).reduce(this.rowReducer) !== this.totalRowValue) {
+                    throw new Error(`Invalid subgrid found, index ${i}`);
+                }
+            }
+        } catch (e) {
+            throw e;
+        }
+    }
 
     private rowReducer(accumulator, currentValue) {
         return accumulator + currentValue;

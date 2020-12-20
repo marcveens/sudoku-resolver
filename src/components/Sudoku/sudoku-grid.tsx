@@ -1,4 +1,5 @@
 import { Component, Fragment, h, Prop, State } from '@stencil/core';
+import { Grid } from '../../Sudoku/Grid';
 import { Sudoku, StartGrid } from '../../Sudoku/Sudoku';
 import { QueryString } from '../../utils/QueryString';
 
@@ -17,18 +18,6 @@ export class SudokuGrid {
         new Sudoku(prefilled);
     }
 
-    getCells() {
-        const gridSize = 81;
-        const gridCells = new Array(gridSize);
-        let i = 0;
-
-        while (i < gridSize) {
-            gridCells[i++] = i;
-        }
-
-        return gridCells;
-    }
-
     onEditModeChange = (event: Event) => {
         const elem = event.currentTarget as HTMLInputElement;
         this.editMode = elem.checked;
@@ -40,6 +29,9 @@ export class SudokuGrid {
     };
 
     render() {
+        const gridInst = new Grid();
+        const grid = gridInst.create(QueryString.getQueryString().substr(1));
+
         return (
             <Fragment>
                 <label>
@@ -49,9 +41,9 @@ export class SudokuGrid {
                 <br />
                 <br />
                 <div class="sudoku-grid">
-                    {this.getCells().map((_, index) => (
-                        <div class="sudoku-grid__cell" data-cell={index}>{this.editMode && (
-                            <input type="text" onChange={e => this.onCellChange(index, (e.currentTarget as HTMLInputElement).value)} value={this.cellValues[index]} />
+                    {grid.map((item, index) => (
+                        <div class="sudoku-grid__cell" data-cell={index} data-grid={item.subgrid}>{this.editMode && (
+                            <input type="text" onChange={e => this.onCellChange(index, (e.currentTarget as HTMLInputElement).value)} value={item.value} />
                         )}</div>
                     ))}
                 </div>

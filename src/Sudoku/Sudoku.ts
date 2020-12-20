@@ -1,4 +1,5 @@
 import { Grid } from './Grid';
+import { Machine } from './Machine';
 import { Validator } from './Validator';
 
 export type StartGrid = { [key: number]: string };
@@ -6,6 +7,7 @@ export type StartGrid = { [key: number]: string };
 export class Sudoku {
     grid: Grid;
     validator: Validator;
+    machine: Machine;
 
     constructor(startGrid: string) {
         this.grid = new Grid();
@@ -18,6 +20,8 @@ export class Sudoku {
             return;
         }
 
-        this.grid.createGrid(startGrid);
+        const grid = this.grid.create(startGrid);
+        this.machine = new Machine(grid);
+        this.machine.run();        
     }
 }

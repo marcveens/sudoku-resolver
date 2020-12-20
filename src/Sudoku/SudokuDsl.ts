@@ -8,18 +8,14 @@ export abstract class SudokuDsl {
     }
 
     public static getVerticalRowByIndex(grid: GridType, index: number): GridType {
-        const rowValues: GridType = [];
+        const gridCopy = JSON.parse(JSON.stringify(grid)) as GridType;
 
-        for (let i = 0; i < 9; i++) {
-            rowValues.push(SudokuDsl.getHorizontalRowByIndex(grid, i)[index]);
-        }
-
-        return rowValues;
+        return gridCopy.filter((_, i) => i % 9 === index);
     }
 
-    // public static getSubgridByIndex(grid: GridType, index: number): GridType {
-    //     const gridCopy = JSON.parse(JSON.stringify(grid)) as GridType;
+    public static getSubgridByIndex(grid: GridType, index: number): GridType {
+        const gridCopy = JSON.parse(JSON.stringify(grid)) as GridType;
         
-    //     return gridCopy;
-    // }
+        return gridCopy.filter(x => x.subgrid === index);
+    }
 }

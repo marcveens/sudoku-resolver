@@ -3,486 +3,567 @@
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 0,
         "value": 5
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 0,
         "value": 3
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 0,
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 1,
         "value": 4
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 6
+        "subgrid": 1,
+        "value": 7
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 7
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 1,
         "value": 8
     },
     {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 9
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 1
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 2
-    },
-    {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 6
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 7
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 2
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 1
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 2,
         "value": 9
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 5
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 3
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 4
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 8
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 2,
         "value": 1
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 2,
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 0,
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 0,
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 0,
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 1,
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 1,
         "value": 9
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 8
+        "subgrid": 1,
+        "value": 5
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 2,
         "value": 3
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 2,
         "value": 4
     },
     {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 2
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 5
-    },
-    {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 6
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 7
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 2,
         "value": 8
     },
     {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 5
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 9
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 7
-    },
-    {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 6
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 0,
         "value": 1
     },
     {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 4
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 2
-    },
-    {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 3
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 4
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 2
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 6
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 8
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 5
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 3
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 7
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 0,
         "value": 9
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 1
+        "subgrid": 0,
+        "value": 8
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 7
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 1
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 1,
         "value": 3
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 1,
+        "value": 4
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 1,
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 2,
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 2,
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 2,
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 3,
+        "value": 8
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 3,
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 3,
         "value": 9
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 2
+        "subgrid": 4,
+        "value": 7
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 4,
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 4,
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 5,
         "value": 4
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 5,
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 5,
+        "value": 3
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 3,
+        "value": 4
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 3,
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 3,
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 4,
         "value": 8
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 4,
         "value": 5
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 6
+        "subgrid": 4,
+        "value": 3
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 5,
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 5,
         "value": 9
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 6
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 5,
         "value": 1
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 5
+        "subgrid": 3,
+        "value": 7
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 3,
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 3,
         "value": 3
     },
     {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 7
-    },
-    {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 2
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 8
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 4
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 2
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 8
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 7
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 4
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 1
-    },
-    {
-        "isStaticValue": true,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 4,
         "value": 9
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 6
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 3
+        "subgrid": 4,
+        "value": 2
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 5
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
-        "value": 3
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 4,
         "value": 4
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 5
-    },
-    {
-        "isStaticValue": false,
-        "possibleValidValues": [],
-        "invalidValues": [],
+        "subgrid": 5,
         "value": 8
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
-        "value": 2
+        "subgrid": 5,
+        "value": 5
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 5,
         "value": 6
     },
     {
-        "isStaticValue": false,
+        "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 6,
+        "value": 9
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 6,
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 6,
         "value": 1
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 7,
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 7,
+        "value": 3
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 7,
         "value": 7
     },
     {
         "isStaticValue": true,
         "possibleValidValues": [],
         "invalidValues": [],
+        "subgrid": 8,
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 8,
+        "value": 8
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 8,
+        "value": 4
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 6,
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 6,
+        "value": 8
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 6,
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 7,
+        "value": 4
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 7,
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 7,
+        "value": 9
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 8,
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 8,
+        "value": 3
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 8,
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 6,
+        "value": 3
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 6,
+        "value": 4
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 6,
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 7,
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 7,
+        "value": 8
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 7,
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 8,
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 8,
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "subgrid": 8,
         "value": 9
     }
 ]
