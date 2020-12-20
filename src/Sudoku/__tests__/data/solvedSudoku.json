@@ -1,0 +1,488 @@
+[
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 3
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 4
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 5
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 2
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 8
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 6
+    },
+    {
+        "isStaticValue": false,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 1
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 7
+    },
+    {
+        "isStaticValue": true,
+        "possibleValidValues": [],
+        "invalidValues": [],
+        "value": 9
+    }
+]
