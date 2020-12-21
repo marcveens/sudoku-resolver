@@ -3,8 +3,10 @@ import { GridType } from './Grid';
 
 export type SudokuState = {
     grid: GridType;
+    cycles: number;
 };
 
 export const { state, onChange } = createStore<SudokuState>({
-    grid: []
+    grid: [],
+    cycles: 0
 });

@@ -12,13 +12,10 @@ const prefilled = '0=5&1=3&4=7&9=6&12=1&13=9&14=5&19=9&20=8&25=6&27=8&31=6&35=3&
 export class SudokuGrid {
     @State() editMode: boolean = false;
     @State() cellValues = QueryString.getParsed<StartGrid>(prefilled);
+    sudoku: Sudoku;
 
     componentWillLoad() {
-        new Sudoku(prefilled);
-    }
-
-    componentShouldUpdate() {
-        console.log(arguments);
+        this.sudoku = new Sudoku(prefilled);
     }
 
     onEditModeChange(event: Event) {
@@ -31,6 +28,10 @@ export class SudokuGrid {
         window.history.replaceState({}, '', `${window.location.pathname}?${QueryString.stringify(this.cellValues)}`);
     };
 
+    solveSudoku() {
+        this.sudoku.run();
+    }
+
     render() {
         return (
             <Fragment>
@@ -39,7 +40,10 @@ export class SudokuGrid {
                     Edit mode
                 </label>
                 <br />
+                <button onClick={() => this.solveSudoku()}>Solve</button>
                 <br />
+                <br />
+                Total cycles: {state.cycles}
                 <div class="sudoku-grid">
                     {state.grid.map((item, index) => (
                         <div
@@ -50,7 +54,6 @@ export class SudokuGrid {
                             {this.editMode ? (
                                 <input type="text" onChange={e => this.onCellChange(index, (e.currentTarget as HTMLInputElement).value)} value={item.value} />
                             ) : item.value}
-                            {JSON.stringify(item.possibleValidValues)}
                         </div>
                     ))}
                 </div>

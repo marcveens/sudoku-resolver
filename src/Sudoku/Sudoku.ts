@@ -22,6 +22,9 @@ export class Sudoku {
 
         const grid = this.grid.create(startGrid);
         this.machine = new Machine(grid);
+    }
+    
+    run() {
         this.machine.run();        
     }
 }
