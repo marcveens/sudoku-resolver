@@ -18,10 +18,12 @@ Now includes Web Worker
 - Duration: 44.1s
 - Memory footprint: 161,084K
 
-## Ideas
+## Todo
 - ~~Bruteforce with backtracking~~
 - ~~Use Web Workers~~
 - First fill in inevitable values
+- Improve Web Worker promises readability
+- Performance improvements
 
 ## Used techniques
 - [StencilJS](https://www.npmjs.com/package/@stencil/core) (Web components)

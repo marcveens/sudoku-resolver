@@ -35,19 +35,14 @@ export class SudokuGrid {
     };
 
     async solveSudoku() {
-        // const machine = new Machine(state.grid);
         solveSudoku(this.grid, (progress) => {
             this.cycles = progress.cycles;
             this.grid = progress.grid;
-            // console.log('progress', progress.cycles);
         }).then(() => {
             console.log('finished')
         }).then(() => {
             console.log('error');
         });
-
-        // console.log(await solveSudoku(state.grid));
-        // this.sudoku.run();
     }
 
     render() {
