@@ -5,7 +5,6 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { GridType } from "./Sudoku/Grid";
 export namespace Components {
     interface AppRoot {
     }
@@ -34,7 +33,6 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface SudokuGrid {
-        "onGridUpdated"?: (event: CustomEvent<GridType>) => void;
     }
     interface IntrinsicElements {
         "app-root": AppRoot;

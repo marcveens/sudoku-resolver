@@ -2,7 +2,7 @@ import { SudokuDsl } from './SudokuDsl';
 import { GridItem, GridType } from './Grid';
 import uniq from 'lodash/uniq';
 import without from 'lodash/without';
-import { EventEmitter } from '@stencil/core';
+import { state } from './State';
 
 export class Machine {
     private grid: GridType;
@@ -13,15 +13,13 @@ export class Machine {
         this.grid = grid;
     }
 
-    public run(updateEmitter?: EventEmitter<GridType>) {
+    public run() {
         if (this.cycles === this.maxCycles) {
             return;
         }
 
         const emitUpdate = () => {
-            if (updateEmitter) {
-                updateEmitter.emit(this.grid);
-            }
+            state.grid = [...this.grid];
         };
 
         const firstContenderIndex = this.grid.findIndex(x => !x.isStaticValue);
