@@ -1,4 +1,5 @@
-import { Grid } from './Grid';
+import { EventEmitter } from '@stencil/core';
+import { Grid, GridType } from './Grid';
 import { Machine } from './Machine';
 import { Validator } from './Validator';
 
@@ -9,7 +10,7 @@ export class Sudoku {
     validator: Validator;
     machine: Machine;
 
-    constructor(startGrid: string) {
+    constructor(startGrid: string, updateEmitter?: EventEmitter<GridType>) {
         this.grid = new Grid();
         this.validator = new Validator();
 
@@ -22,6 +23,6 @@ export class Sudoku {
 
         const grid = this.grid.create(startGrid);
         this.machine = new Machine(grid);
-        this.machine.run();        
+        this.machine.run(updateEmitter);        
     }
 }

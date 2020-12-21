@@ -1,8 +1,8 @@
 import { SudokuDsl } from './SudokuDsl';
 import { GridItem, GridType } from './Grid';
-import { state } from './State';
 import uniq from 'lodash/uniq';
 import without from 'lodash/without';
+import { EventEmitter } from '@stencil/core';
 
 export class Machine {
     private grid: GridType;
@@ -13,16 +13,25 @@ export class Machine {
         this.grid = grid;
     }
 
-    public run() {
+    public run(updateEmitter?: EventEmitter<GridType>) {
         if (this.cycles === this.maxCycles) {
             return;
         }
 
-        const firstContenderIndex = this.grid.findIndex(x => !x.isStaticValue);
+        const emitUpdate = () => {
+            if (updateEmitter) {
+                updateEmitter.emit(this.grid);
+            }
+        };
 
-        state.grid = this.grid;
-        this.grid[firstContenderIndex] = this.populateMetaDataByIndex(firstContenderIndex);
-        state.grid = this.grid;
+        const firstContenderIndex = this.grid.findIndex(x => !x.isStaticValue);
+        
+        emitUpdate();
+        
+        setTimeout(() => {
+            this.grid[firstContenderIndex] = this.populateMetaDataByIndex(firstContenderIndex);
+            emitUpdate();
+        }, 2000);
 
 
 
@@ -49,8 +58,8 @@ export class Machine {
 
     public populateMetaDataByIndex(cellIndex: number): GridItem {
         let cell = JSON.parse(JSON.stringify(this.grid[cellIndex])) as GridItem;
-        const horizontalNeighbours = SudokuDsl.getHorizontalNeighboursByCellIndex(this.grid, cellIndex);  
-        const verticalNeighbours = SudokuDsl.getVerticalNeighboursByCellIndex(this.grid, cellIndex);   
+        const horizontalNeighbours = SudokuDsl.getHorizontalNeighboursByCellIndex(this.grid, cellIndex);
+        const verticalNeighbours = SudokuDsl.getVerticalNeighboursByCellIndex(this.grid, cellIndex);
         const subgridNeighbours = SudokuDsl.getSubgridNeighboursByCellIndex(this.grid, cellIndex);
 
         cell = this.populateMetaDataByNeighbours(cell, horizontalNeighbours);
@@ -66,7 +75,7 @@ export class Machine {
             .map(x => x.value);
 
         cell.invalidValues = uniq(cell.invalidValues.concat(neighbourStaticValues));
-        cell.possibleValidValues = without([1,2,3,4,5,6,7,8,9], ...cell.invalidValues);
+        cell.possibleValidValues = without([1, 2, 3, 4, 5, 6, 7, 8, 9], ...cell.invalidValues);
 
         return cell;
     }
