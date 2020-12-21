@@ -8,5 +8,5 @@ export type SudokuState = {
 
 export const { state, onChange } = createStore<SudokuState>({
     grid: [],
-    cycles: 0
+    cycles: 0,
 });

@@ -13,9 +13,14 @@ export class Machine {
     private grid: GridType;
     private cycles: number = 0;
     private readonly maxCycles: number = 10000;
+    private fillableIndexes: number[];
+    private timerStart: number;
+    private timerEnd: number;
+    
 
     constructor(grid: GridType) {
         this.grid = grid;
+        this.fillableIndexes = this.getFillableIndexes();
         this.emitUpdate();
     }
 
@@ -25,34 +30,14 @@ export class Machine {
     };
 
     public run() {
-
-        this.emitUpdate();
-
+        this.timerStart = performance.now();
+        // Get first empty cell, kickoff!
         const firstContenderIndex = this.grid.findIndex(x => !x.isStaticValue);
         this.updateCell(firstContenderIndex, UpdateDirection.NEXT);
-
-        console.log(this.getNextCell(2));
-
-        /*
-            1. For each cell
-                - Check all possible values
-                    - Which value is available horizontally?
-                    - ... vertically?
-                    - in subgrid?
-                - Register impossible values so they will never have to be run through
-            2. Loop until no value is possible
-            3. Check previous cell if other value is possible
-                - If so
-                    - Try other value and continue
-                - If not 
-                    - Go back another cell and try again
-        */
-
-
     }
 
     public populateMetaDataByIndex(cellIndex: number, direction: UpdateDirection = UpdateDirection.NEXT): GridItem {
-        let cell = JSON.parse(JSON.stringify(this.grid[cellIndex])) as GridItem;
+        let cell = this.grid[cellIndex];
         const horizontalNeighbours = SudokuDsl.getHorizontalNeighboursByCellIndex(this.grid, cellIndex);
         const verticalNeighbours = SudokuDsl.getVerticalNeighboursByCellIndex(this.grid, cellIndex);
         const subgridNeighbours = SudokuDsl.getSubgridNeighboursByCellIndex(this.grid, cellIndex);
@@ -72,8 +57,6 @@ export class Machine {
 
         cell.value = cell.possibleValidValues[0];
 
-        // console.log(cellIndex, cell.possibleValidValues);
-
         return cell;
     }
 
@@ -86,14 +69,23 @@ export class Machine {
         this.emitUpdate();
         this.cycles++;
 
+        // Loop as long the cell is still in the grid
         if (this.getNextCell(cellIndex) !== -1) {
+            // Added setTimeout in order to make things visible on the front-end. Otherwise it will show after calculating it all. 
             setTimeout(() => {
+                // If there are still possible valid values, continue on to the next cell
                 if (this.grid[cellIndex].possibleValidValues.length > 0) {
                     this.updateCell(this.getNextCell(cellIndex), UpdateDirection.NEXT);
+                // If there are no possible values, return to the previous cell to try another value
                 } else {
                     this.updateCell(this.getPreviousCell(cellIndex), UpdateDirection.PREVIOUS);
                 }
             });
+        } else {
+            console.log('finished!');
+            this.timerEnd = performance.now();
+            console.log(`Took ${(this.timerEnd - this.timerStart)} milliseconds.`);
+            console.log(JSON.stringify(this.grid));
         }
     }
 
@@ -102,6 +94,7 @@ export class Machine {
             .filter(x => x.value)
             .map(x => x.value);
 
+        // Make sure to exclude all neighbour values, as they can't be filled in again
         cell.invalidValues = uniq(cell.invalidValues.concat(neighbourStaticValues));
         cell.possibleValidValues = without([1, 2, 3, 4, 5, 6, 7, 8, 9], ...cell.invalidValues);
 
@@ -109,7 +102,7 @@ export class Machine {
     }
 
     private getNextCell(fromIndex: number): number {
-        const indexList = this.getFillableIndexes();
+        const indexList = this.fillableIndexes;
         const currentIndex = indexList.indexOf(fromIndex);
         const nextIndex = indexList[currentIndex + 1];
 
@@ -117,7 +110,7 @@ export class Machine {
     }
 
     private getPreviousCell(fromIndex: number): number {
-        const indexList = this.getFillableIndexes();
+        const indexList = this.fillableIndexes;
         const currentIndex = indexList.indexOf(fromIndex);
         const nextIndex = indexList[currentIndex - 1];
 

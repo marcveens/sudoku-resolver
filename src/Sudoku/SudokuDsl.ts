@@ -2,21 +2,16 @@ import { GridType } from './Grid';
 
 export abstract class SudokuDsl {
     public static getHorizontalRowByRowIndex(grid: GridType, index: number): GridType {
-        const gridCopy = JSON.parse(JSON.stringify(grid)) as GridType;
         const startIndex = index * 9;
-        return gridCopy.slice(startIndex, startIndex + 9);
+        return grid.slice(startIndex, startIndex + 9);
     }
 
     public static getVerticalRowByRowIndex(grid: GridType, index: number): GridType {
-        const gridCopy = JSON.parse(JSON.stringify(grid)) as GridType;
-
-        return gridCopy.filter((_, i) => i % 9 === index);
+        return grid.filter((_, i) => i % 9 === index);
     }
 
     public static getSubgridBySubgridIndex(grid: GridType, index: number): GridType {
-        const gridCopy = JSON.parse(JSON.stringify(grid)) as GridType;
-        
-        return gridCopy.filter(x => x.subgrid === index);
+        return grid.filter(x => x.subgrid === index);
     }
 
     public static getHorizontalNeighboursByCellIndex(grid: GridType, index: number): GridType {
