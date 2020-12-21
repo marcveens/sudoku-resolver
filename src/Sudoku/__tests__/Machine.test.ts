@@ -12,7 +12,8 @@ describe('Machine', () => {
             subgrid: 0,
             invalidValues: [5, 3, 7, 8, 6, 9],
             possibleValidValues: [1, 2, 4],
-            isStaticValue: false
+            isStaticValue: false,
+            value: 1
         });
 
         // assert

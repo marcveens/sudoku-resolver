@@ -1,30 +1,26 @@
-import { Grid } from './Grid';
-import { Machine } from './Machine';
+import { GridCreator, GridType } from './Grid';
 import { Validator } from './Validator';
 
 export type StartGrid = { [key: number]: string };
 
 export class Sudoku {
-    grid: Grid;
-    validator: Validator;
-    machine: Machine;
+    private grid: GridType;
 
     constructor(startGrid: string) {
-        this.grid = new Grid();
-        this.validator = new Validator();
+        const gridCreator = new GridCreator();
+        const validator = new Validator();
 
         try {
-            this.validator.validateStartGrid(startGrid);
+            validator.validateStartGrid(startGrid);
         } catch (e) {
             console.error(e);
             return;
         }
 
-        const grid = this.grid.create(startGrid);
-        this.machine = new Machine(grid);
+        this.grid = gridCreator.create(startGrid);
     }
-    
-    run() {
-        this.machine.run();        
+
+    getGrid() {
+        return this.grid;
     }
 }

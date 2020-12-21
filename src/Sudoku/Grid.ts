@@ -21,7 +21,7 @@ export class GridItem {
 
 export type GridType = GridItem[];
 
-export class Grid {
+export class GridCreator {
     private maxCells = 9 * 9;
 
     public create(startGrid: string): GridType {

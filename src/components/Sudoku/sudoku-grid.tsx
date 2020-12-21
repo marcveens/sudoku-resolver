@@ -1,8 +1,9 @@
 import { Component, Fragment, h, State } from '@stencil/core';
 import { Sudoku, StartGrid } from '../../Sudoku/Sudoku';
 import { QueryString } from '../../utils/QueryString';
-import { state } from '../../Sudoku/State';
 import { Environment } from '../../utils/Environment';
+import { solveSudoku } from '../../sudoku.worker';
+import { GridType } from '../../Sudoku/Grid';
 
 // 8364 cycles
 const prefilled = '0=5&1=3&4=7&9=6&12=1&13=9&14=5&19=9&20=8&25=6&27=8&31=6&35=3&36=4&39=8&41=3&44=1&45=7&49=2&53=6&55=6&60=2&61=8&66=4&67=1&68=9&71=5&76=8&79=7&80=9';
@@ -14,12 +15,14 @@ const prefilled = '0=5&1=3&4=7&9=6&12=1&13=9&14=5&19=9&20=8&25=6&27=8&31=6&35=3&
     tag: 'sudoku-grid'
 })
 export class SudokuGrid {
+    @State() cycles: number = 0;
+    @State() grid: GridType;
     @State() editMode: boolean;
     @State() cellValues = QueryString.getParsed<StartGrid>(prefilled);
-    sudoku: Sudoku;
 
     componentWillLoad() {
-        this.sudoku = new Sudoku(prefilled);
+        const sudoku = new Sudoku(prefilled);
+        this.grid = sudoku.getGrid();
     }
 
     onEditModeChange() {
@@ -31,8 +34,20 @@ export class SudokuGrid {
         window.history.replaceState({}, '', `${window.location.pathname}?${QueryString.stringify(this.cellValues)}`);
     };
 
-    solveSudoku() {
-        this.sudoku.run();
+    async solveSudoku() {
+        // const machine = new Machine(state.grid);
+        solveSudoku(this.grid, (progress) => {
+            this.cycles = progress.cycles;
+            this.grid = progress.grid;
+            // console.log('progress', progress.cycles);
+        }).then(() => {
+            console.log('finished')
+        }).then(() => {
+            console.log('error');
+        });
+
+        // console.log(await solveSudoku(state.grid));
+        // this.sudoku.run();
     }
 
     render() {
@@ -48,9 +63,9 @@ export class SudokuGrid {
                 <button onClick={() => this.solveSudoku()}>Solve</button>
                 <br />
                 <br />
-                Total cycles: {state.cycles}
+                Total cycles: {this.cycles}
                 <div class="sudoku-grid">
-                    {state.grid.map((item, index) => (
+                    {this.grid.map((item, index) => (
                         <div
                             class={`sudoku-grid__cell ${item.isStaticValue ? 'sudoku-grid__cell--static' : ''}`}
                             data-cell={index}

@@ -1,8 +1,8 @@
-import { Grid } from '../Grid';
+import { GridCreator } from '../Grid';
 import generatedGrid from './data/generatedGrid.json';
 
 describe('Grid', () => {
-    const grid = new Grid();
+    const grid = new GridCreator();
 
     it('should create a grid', () => {
         // arrange 

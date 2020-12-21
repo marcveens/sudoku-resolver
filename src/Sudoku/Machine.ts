@@ -2,12 +2,18 @@ import { SudokuDsl } from './SudokuDsl';
 import { GridItem, GridType } from './Grid';
 import uniq from 'lodash/uniq';
 import without from 'lodash/without';
-import { state } from './State';
+import { SudokuState } from './State';
 
 enum UpdateDirection {
     PREVIOUS,
     NEXT
 }
+
+type MachinePromise = {
+    progress: (state: SudokuState) => void,
+    resolve: (value: any) => void;
+    reject: (value: any) => void;
+};
 
 export class Machine {
     private grid: GridType;
@@ -16,24 +22,25 @@ export class Machine {
     private fillableIndexes: number[];
     private timerStart: number;
     private timerEnd: number;
-    
+
 
     constructor(grid: GridType) {
         this.grid = grid;
         this.fillableIndexes = this.getFillableIndexes();
-        this.emitUpdate();
     }
 
-    emitUpdate() {
-        state.grid = [...this.grid];
-        state.cycles = this.cycles;
-    };
-
-    public run() {
+    public run(progress: (state: SudokuState) => void) {
         this.timerStart = performance.now();
-        // Get first empty cell, kickoff!
-        const firstContenderIndex = this.grid.findIndex(x => !x.isStaticValue);
-        this.updateCell(firstContenderIndex, UpdateDirection.NEXT);
+
+        return new Promise((resolve, reject) => {
+            // Get first empty cell, kickoff!
+            const firstContenderIndex = this.grid.findIndex(x => !x.isStaticValue);
+            this.updateCell(firstContenderIndex, UpdateDirection.NEXT, {
+                progress,
+                resolve,
+                reject
+            });
+        });
     }
 
     public populateMetaDataByIndex(cellIndex: number, direction: UpdateDirection = UpdateDirection.NEXT): GridItem {
@@ -60,32 +67,40 @@ export class Machine {
         return cell;
     }
 
-    private updateCell(cellIndex: number, direction: UpdateDirection) {
+    private updateCell(cellIndex: number, direction: UpdateDirection, promise?: MachinePromise) {
         if (this.cycles === this.maxCycles) {
             return;
         }
 
         this.grid[cellIndex] = this.populateMetaDataByIndex(cellIndex, direction);
-        this.emitUpdate();
+        if (promise) {
+            promise.progress({
+                grid: this.grid,
+                cycles: this.cycles
+            });
+        }
         this.cycles++;
 
         // Loop as long the cell is still in the grid
         if (this.getNextCell(cellIndex) !== -1) {
             // Added setTimeout in order to make things visible on the front-end. Otherwise it will show after calculating it all. 
-            setTimeout(() => {
+            // setTimeout(() => {
                 // If there are still possible valid values, continue on to the next cell
                 if (this.grid[cellIndex].possibleValidValues.length > 0) {
-                    this.updateCell(this.getNextCell(cellIndex), UpdateDirection.NEXT);
-                // If there are no possible values, return to the previous cell to try another value
+                    this.updateCell(this.getNextCell(cellIndex), UpdateDirection.NEXT, promise);
+                    // If there are no possible values, return to the previous cell to try another value
                 } else {
-                    this.updateCell(this.getPreviousCell(cellIndex), UpdateDirection.PREVIOUS);
+                    this.updateCell(this.getPreviousCell(cellIndex), UpdateDirection.PREVIOUS, promise);
                 }
-            });
+            // });
         } else {
             console.log('finished!');
             this.timerEnd = performance.now();
             console.log(`Took ${(this.timerEnd - this.timerStart)} milliseconds.`);
-            console.log(JSON.stringify(this.grid));
+
+            if (promise) {
+                promise.resolve(1);
+            }
         }
     }
 
