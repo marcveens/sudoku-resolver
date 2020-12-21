@@ -1,12 +1,22 @@
 import { QueryString } from '../utils/QueryString';
 import { StartGrid } from './Sudoku';
 
-class GridItem {
-    value: number | undefined;
+export class GridItem {
+    value?: number;
     isStaticValue: boolean = false;
     possibleValidValues: number[] = [];
     invalidValues: number[] = [];
     subgrid: number = 0;
+
+    constructor(v?: GridItem) {
+        if (v) {
+            this.value = v.value;
+            this.isStaticValue = v.isStaticValue;
+            this.possibleValidValues = v.possibleValidValues;
+            this.invalidValues = v.invalidValues;
+            this.subgrid = v.subgrid;
+        }
+    }
 };
 
 export type GridType = GridItem[];

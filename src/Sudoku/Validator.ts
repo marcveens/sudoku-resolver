@@ -45,7 +45,7 @@ export class Validator {
     public validateHorizontalRows(grid: GridType) {
         try {
             for (let i = 0; i < this.rowLength; i++) {
-                const values = SudokuDsl.getHorizontalRowByIndex(grid, i);
+                const values = SudokuDsl.getHorizontalRowByRowIndex(grid, i);
                 if (values.map(x => x.value).reduce(this.rowReducer) !== this.totalRowValue) {
                     throw new Error(`Invalid horizontal row found, index ${i}`);
                 }
@@ -58,7 +58,7 @@ export class Validator {
     public validateVerticalRows(grid: GridType) {
         try {
             for (let i = 0; i < this.rowLength; i++) {
-                const values = SudokuDsl.getVerticalRowByIndex(grid, i);
+                const values = SudokuDsl.getVerticalRowByRowIndex(grid, i);
                 if (values.map(x => x.value).reduce(this.rowReducer) !== this.totalRowValue) {
                     throw new Error(`Invalid vertical row found, index ${i}`);
                 }
@@ -71,7 +71,7 @@ export class Validator {
     public validateSubgrids(grid: GridType) {
         try {
             for (let i = 0; i < this.rowLength; i++) {
-                const values = SudokuDsl.getSubgridByIndex(grid, i);
+                const values = SudokuDsl.getSubgridBySubgridIndex(grid, i);
                 if (values.map(x => x.value).reduce(this.rowReducer) !== this.totalRowValue) {
                     throw new Error(`Invalid subgrid found, index ${i}`);
                 }
