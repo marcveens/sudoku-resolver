@@ -9,7 +9,7 @@
     "test": "stencil test --spec",
     "test.watch": "stencil test --spec --watchAll",
     "generate": "stencil generate",
-    "copy-www-to-docs": "rimraf docs && copyfiles www/**/* docs --up 1"
+    "copy-www-to-docs": "rimraf docs && copyfiles www/**/* ./ --up 1"
   },
   "devDependencies": {
     "@stencil/core": "^2.0.0",
