@@ -36,7 +36,6 @@ export class SudokuGrid {
     }
 
     render() {
-        console.log(this.editMode);
         return (
             <Fragment>
                 {Environment.isDevelopment && (
