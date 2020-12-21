@@ -106,3 +106,4 @@ dist
 # Stencil
 !www/favicon.ico
 www/
+docs/
