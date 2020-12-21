@@ -4,6 +4,7 @@ import { StartGrid } from './Sudoku';
 export class GridItem {
     value?: number;
     isStaticValue: boolean = false;
+    guaranteedValue: boolean = false;
     possibleValidValues: number[] = [];
     invalidValues: number[] = [];
     subgrid: number = 0;
@@ -12,6 +13,7 @@ export class GridItem {
         if (v) {
             this.value = v.value;
             this.isStaticValue = v.isStaticValue;
+            this.guaranteedValue = v.guaranteedValue;
             this.possibleValidValues = v.possibleValidValues;
             this.invalidValues = v.invalidValues;
             this.subgrid = v.subgrid;

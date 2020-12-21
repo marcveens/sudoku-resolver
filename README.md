@@ -2,7 +2,7 @@
 
 A fun little hobby project involving some creative problem solving and an interesting algorithm. 
 
-The puzzle is solved using a recursive function in combination with a backtracking algorithm. For every empty cell a list of possible valid values is created. The first value is placed and the program moves on to the next empty field. When the program encounters a field with no possible valid values, the backtracking algorithm makes sure the previous cell is checked to see if another value is possible to fill in. If that's the case, the other value is used and the program continues. If it's not the case, it goes back another cell and tries everything again.
+The puzzle is solved using a combination of filling in inevitable values and a recursive function using a backtracking algorithm. For every empty cell a list of possible valid values is created. The first value is placed and the program moves on to the next empty field. When the program encounters a field with no possible valid values, the backtracking algorithm makes sure the previous cell is checked to see if another value is possible to fill in. If that's the case, the other value is used and the program continues. If it's not the case, it goes back another cell and tries everything again.
 
 ## Statistics
 - Used grid:
@@ -12,18 +12,30 @@ The puzzle is solved using a recursive function in combination with a backtracki
 - Cycles: 8364
 - Duration: 44.1s
 - Memory footprint: 1,027,704K
-### Version 1.1
+### Version 1.01
 Now includes Web Worker
 - Cycles: 8364
 - Duration: 44.1s
 - Memory footprint: 161,084K
 
+### Version 1.02
+Now includes recursion using a [trampoline function](https://blog.logrocket.com/using-trampolines-to-manage-large-recursive-loops-in-javascript-d8c9db095ae3/)
+- Cycles: 8364
+- Duration 975ms
+- Memory footprint: 85,700K
+
+### Version 1.03
+Now first filling in inevitable records, so no difficult lookups needed. Recursive trampoline function now only used on more difficult puzzles. This reduces time drastically. 
+- Cycles: 51
+- Duration: 9.9ms
+- Memory footprint: 49,868K
+
 ## Todo
 - ~~Bruteforce with backtracking~~
 - ~~Use Web Workers~~
-- First fill in inevitable values
-- Improve Web Worker promises readability
-- Performance improvements
+- ~~First fill in inevitable values~~
+- ~~Improve Web Worker promises readability~~
+- ~~Performance improvements~~
 
 ## Used techniques
 - [StencilJS](https://www.npmjs.com/package/@stencil/core) (Web components)

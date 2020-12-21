@@ -67,4 +67,9 @@ main {
             font-size: inherit;
         }
     }
+
+    &__error {
+        margin-top: 20px;
+        color: red;
+    }
 }

@@ -13,6 +13,7 @@ describe('Machine', () => {
             invalidValues: [5, 3, 7, 8, 6, 9],
             possibleValidValues: [1, 2, 4],
             isStaticValue: false,
+            guaranteedValue: false,
             value: 1
         });
 
